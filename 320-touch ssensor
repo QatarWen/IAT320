@@ -1,0 +1,39 @@
+void setup() {
+  //Serial.begin(9600);
+  pinMode(8,OUTPUT);
+}
+void loop() {
+ // Serial.print("Analog Input: ");
+  Serial.println(analogRead(A0));
+  Serial.println(analogRead(A1));
+  Serial.println(analogRead(A2));
+  Serial.println(analogRead(A3));
+  Serial.println(analogRead(A4));
+  Serial.println(analogRead(A5));
+
+  if(analogRead(A0) < 1019){
+    tone(8,210,200);
+    delay(10);
+  }
+  if(analogRead(A1) < 1018){
+    tone(8,260,200);
+    delay(10);
+  }
+  if(analogRead(A2) < 1018){
+    tone(8,310,200);
+    delay(10);
+  }
+  if(analogRead(A3) < 1016){
+    tone(8,340,200);
+    delay(10);
+  }
+ if(analogRead(A4) < 1018){
+    tone(8,410,200);
+    delay(10);
+  }
+
+  if(analogRead(A5) < 1018){
+    tone(8,460,200);
+    delay(10);
+  }
+}
